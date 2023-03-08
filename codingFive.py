@@ -35,10 +35,9 @@ while (not isValid(initialHeight, initialVelocity)):
     print("Please enter intial velocity:")
     initialVelocity = getInput()
 
-# Casting v h and 2 to float to ensure they work with our functions
+# Casting v and h to float to ensure they work with our functions
 initialVelocity = float(initialVelocity)
 initialHeight = float(initialHeight)
-two = float(2)
 
 # Calculating the maximum height
 maxHeightTime = initialVelocity/32
