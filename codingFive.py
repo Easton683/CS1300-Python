@@ -29,7 +29,7 @@ initialHeight = -1
 initialVelocity = -1
 
 # getting input and using the valid function as the escape from the loop
-while (not isValid(initialHeight, initialVelocity)):
+while not isValid(initialHeight, initialVelocity):
     print("Please enter initial height: ")
     initialHeight = getInput()
     print("Please enter intial velocity:")
@@ -39,10 +39,10 @@ while (not isValid(initialHeight, initialVelocity)):
 initialVelocity = float(initialVelocity)
 initialHeight = float(initialHeight)
 
-# Calculating the maximum height
+# Calculating the maximum height (added in meters also for creativity and scientific use)
 maxHeightTime = initialVelocity/32
 maxHeight = (initialHeight)+(initialVelocity*maxHeightTime)-(16*(maxHeightTime*maxHeightTime))
-print("The max height of the object will be:", maxHeight)
+print("The max height of the object will be:", maxHeight, "feet, or ", maxHeight/.3048, "meters")
 
 # Setting secondsPassed as our iterator
 secondsPassed = 0.1
