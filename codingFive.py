@@ -41,13 +41,15 @@ initialHeight = float(initialHeight)
 
 # Calculating the maximum height (added in meters also for creativity and scientific use)
 maxHeightTime = initialVelocity/32
-maxHeight = (initialHeight)+(initialVelocity*maxHeightTime)-(16*(maxHeightTime*maxHeightTime))
-print("The max height of the object will be:", maxHeight, "feet, or ", maxHeight/.3048, "meters")
+maxHeight = (initialHeight)+(initialVelocity*maxHeightTime) - \
+    (16*(maxHeightTime*maxHeightTime))
+print("The max height of the object will be:",
+      maxHeight, "feet, or ", maxHeight/.3048, "meters")
 
 # Setting secondsPassed as our iterator
 secondsPassed = 0.1
 secondsPassed = float(secondsPassed)
-height=initialHeight
+height = initialHeight
 velocity = initialVelocity
 
 # looping until the ball hits the ground
