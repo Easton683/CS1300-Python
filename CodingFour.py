@@ -1,4 +1,5 @@
 '''Word Encryption Algorithm'''
+
 import random
 # -------------------
 # DOCTYPE Python

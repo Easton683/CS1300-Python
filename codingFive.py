@@ -8,45 +8,52 @@
 # -------------------
 
 # Defining functions to get input and check for positive values
-def getInput():
-    x = input()
-    return x
 
-def isValid(h,v):
-    v=float(v)
-    h=float(h)
-    if (h>=0 and v>=0):
+
+def getInput():
+    xInput = input()
+    return xInput
+
+
+def isValid(x, y):
+    x = float(x)
+    y = float(y)
+    if (y >= 0 and x >= 0):
         return True
     else:
         return False
 
+
 # Setting initial values so the loop will run atleast once
-h=-1
-v=-1
+initialHeight = -1
+initialVelocity = -1
 
 # getting input and using the valid function as the escape from the loop
-while(isValid(h,v)==False):
+while (not isValid(initialHeight, initialVelocity)):
     print("Please enter initial height: ")
-    h=getInput()
+    initialHeight = getInput()
     print("Please enter intial velocity:")
-    v=getInput()
+    initialVelocity = getInput()
 
-# Casting v and h to float to ensure they work with out functions
-v=float(v)
-h=float(h)
+# Casting v h and 2 to float to ensure they work with our functions
+initialVelocity = float(initialVelocity)
+initialHeight = float(initialHeight)
+two = float(2)
 
 # Calculating the maximum height
-maxHeightTime = v/32
-maxHeight = h+v*maxHeightTime-16*maxHeightTime*2
+maxHeightTime = initialVelocity/32
+maxHeight = (initialHeight)+(initialVelocity*maxHeightTime)-(16*(maxHeightTime*maxHeightTime))
 print("The max height of the object will be:", maxHeight)
 
 # Setting secondsPassed as our iterator
-secondsPassed = 0
-secondsPassed=float(secondsPassed)
+secondsPassed = 0.1
+secondsPassed = float(secondsPassed)
+height=initialHeight
+velocity = initialVelocity
 
 # looping until the ball hits the ground
-while(h>0):
-    h = h+v*secondsPassed-16*secondsPassed*2
-    v = v-32.15
-    secondsPassed+=.1
-print('The ball will hit the ground after',secondsPassed,'seconds')
+while height > 0:
+    height = height+velocity*secondsPassed-16*(secondsPassed*secondsPassed)
+    velocity = velocity-3.215
+    secondsPassed = secondsPassed+.1
+print('The ball will hit the ground after', secondsPassed, 'seconds')
