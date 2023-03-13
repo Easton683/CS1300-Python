@@ -3,8 +3,8 @@
 # -------------------
 # DOCTYPE Python
 # Easton Jackson CS 1300
-# Coding Five
-# 3/6/2023
+# Coding Six
+# 3/13/2023
 # -------------------
 
 # Function to find consecutive letters in string
